@@ -1,3 +1,8 @@
+# Notes
+This repo was used to generate the result for generating Action Recognition related results in Def Expo 2020.
+Link to Result can be viewed in Paaji and Yukti ji's following slack thread.
+https://dimension-nxg.slack.com/archives/GC02XU9R7/p1580298369001300
+
 
 # Multi-person Real-time Action Recognition Based-on Human Skeleton
 
