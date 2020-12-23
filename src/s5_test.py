@@ -365,7 +365,24 @@ if __name__ == "__main__":
             # Print label of a person
             if len(dict_id2skeleton):
                 min_id = min(dict_id2skeleton.keys())
-                print("prediced label is :", dict_id2label[min_id])
+                #print("prediced label is :", dict_id2label[min_id])
+                #**********************************************************************************************
+                #Violence detection logic goes out here ::
+                FONT_SIZE = 0.7
+                COLOR_INTENSITY = 255
+                label = dict_id2label[min_id]
+                if label == "kick" or label == "punch":
+                    ViolenceTag = "Extreme Violence Detected "
+                elif label == "wave":
+                    ViolenceTag = "No violence detected"
+                else:
+                    ViolenceTag = ""
+                # Putting text tag
+                cv2.putText(img_disp, text=ViolenceTag, org=(100, 100),
+                        fontFace=cv2.FONT_HERSHEY_SIMPLEX, fontScale=FONT_SIZE,
+                        color=(0, 0, int(COLOR_INTENSITY)), thickness=2)
+                #Violence detection logic ends here...
+                
 
             # -- Display image, and write to video.avi
             img_displayer.display(img_disp, wait_key_ms=1)
