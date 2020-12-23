@@ -8,8 +8,15 @@ Use this to create an anaconda environment : https://dimension-nxg.slack.com/arc
 ```Pafprocess error : No module named '_pafprocess'
 you need to build c++ library for pafprocess. See : https://github.com/ildoonet/tf-pose-estimation/tree/master/tf_pose/pafprocess
 ```
- > To get rid of the above error install tf_pose 
+ > To get rid of the above error install tf_pose by going inside the ExtraUtil folder then 
+ cd tf-pose-estimation/tf_pose/pafprocess
+ followed by 
+ ```
+ $ swig -python -c++ pafprocess.i && python3 setup.py build_ext --inplace
+ ```
 
+### Other package not installed error
+use ``` pip install package-name ``` to install the package provided you have activated the anaconda environment.
 
 # Notes
 This repo was used to generate the result for generating Action Recognition related results in Def Expo 2020.
@@ -17,6 +24,7 @@ Link to Result can be viewed in Paaji and Yukti ji's following slack thread.
 https://dimension-nxg.slack.com/archives/GC02XU9R7/p1580298369001300
 
 
+``` Note that this uses OpenPose for pose estimation in the background```
 
 # Original Repo documentation below
 # Multi-person Real-time Action Recognition Based-on Human Skeleton
