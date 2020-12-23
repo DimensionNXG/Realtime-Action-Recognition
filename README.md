@@ -29,6 +29,10 @@ Link to Result can be viewed in Paaji and Yukti ji's following slack thread.
 https://dimension-nxg.slack.com/archives/GC02XU9R7/p1580298369001300
 
 
+## Violence Detection Logic:
+Line 370-384 in src/s5_test.py
+
+
 ``` Note that this uses OpenPose for pose estimation in the background```
 
 # Original Repo documentation below
