@@ -2,8 +2,13 @@
 https://drive.google.com/file/d/1fPm4jXT-WSgBBSB6B6vRkytsZhFpNh0F/view
 
 # Extra Notes:
-To enable hasslefree configuration, I have listed a environment.yml
+To enable hasslefree configuration, I have listed a environment.yml. 
 Use this to create an anaconda environment : https://dimension-nxg.slack.com/archives/C7MAH32MQ/p1608526931005200
+i.e  
+``` 
+$ conda env create -f environment.yml
+
+```
 
 ```Pafprocess error : No module named '_pafprocess'
 you need to build c++ library for pafprocess. See : https://github.com/ildoonet/tf-pose-estimation/tree/master/tf_pose/pafprocess
@@ -16,7 +21,7 @@ you need to build c++ library for pafprocess. See : https://github.com/ildoonet/
  ```
 
 ### Other package not installed error
-use ``` pip install package-name ``` to install the package provided you have activated the anaconda environment.
+use ``` pip install package-name ``` to install the package provided you have activated the anaconda environment. Like pycocotools
 
 # Notes
 This repo was used to generate the result for generating Action Recognition related results in Def Expo 2020.

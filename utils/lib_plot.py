@@ -81,7 +81,7 @@ def draw_action_result(img_display, id, skeleton, str_action_label):
     maxy = -999
     i = 0
     NaN = 0
-
+    raw_img = img_display
     while i < len(skeleton):
         if not(skeleton[i] == NaN or skeleton[i+1] == NaN):
             minx = min(minx, skeleton[i])
@@ -97,27 +97,28 @@ def draw_action_result(img_display, id, skeleton, str_action_label):
 
     # Draw bounding box
     # drawBoxToImage(img_display, [minx, miny], [maxx, maxy])
-    img_display = cv2.rectangle(
-        img_display, (minx, miny), (maxx, maxy), (0, 255, 0), 4)
+    #Turning of rectangles.
+    #img_display = cv2.rectangle(
+    #    img_display, (minx, miny), (maxx, maxy), (0, 255, 0), 4)
 
     # Draw text at left corner
     box_scale = max(
         0.5, min(2.0, (1.0*(maxx - minx)/img_display.shape[1] / (0.3))**(0.5)))
     fontsize = 1.4 * box_scale
-    linewidth = int(math.ceil(3 * box_scale))
+    linewidth = int(math.ceil(2 * box_scale))
 
     TEST_COL = int(minx + 5 * box_scale)
     TEST_ROW = int(miny - 10 * box_scale)
     # TEST_ROW = int( miny)
     # TEST_ROW = int( skeleton[3] * img_display.shape[0])
 
-    img_display = cv2.putText(
-        img_display, "P"+str(id % 10)+": "+str_action_label, (TEST_COL, TEST_ROW), font, fontsize, (0, 0, 255), linewidth, cv2.LINE_AA)
+    #img_display = cv2.putText(
+    #    img_display, "P"+str(id % 10)+": "+str_action_label, (TEST_COL, TEST_ROW), font, fontsize, (0, 0, 255), linewidth, cv2.LINE_AA)
 
 
-def add_white_region_to_left_of_image(img_raw, img_disp):
+def add_white_region_to_left_of_image(raw_img, img_disp):
     r, c, d = img_disp.shape
     #Stacking the original image on left
     #blank = 255 + np.zeros((r, int(c/4), d), np.uint8)
-    img_disp = np.hstack((img_raw, img_disp))
+    img_disp = np.hstack((raw_img, img_disp))
     return img_disp
