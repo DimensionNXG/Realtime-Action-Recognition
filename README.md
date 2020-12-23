@@ -15,6 +15,8 @@ you need to build c++ library for pafprocess. See : https://github.com/ildoonet/
  $ swig -python -c++ pafprocess.i && python3 setup.py build_ext --inplace
  ```
 
+### Other package not installed error
+use ``` pip install package-name ``` to install the package provided you have activated the anaconda environment.
 
 # Notes
 This repo was used to generate the result for generating Action Recognition related results in Def Expo 2020.
