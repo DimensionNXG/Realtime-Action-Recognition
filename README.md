@@ -21,7 +21,7 @@ you need to build c++ library for pafprocess. See : https://github.com/ildoonet/
  ```
 
 ### Other package not installed error
-use ``` pip install package-name ``` to install the package provided you have activated the anaconda environment.
+use ``` pip install package-name ``` to install the package provided you have activated the anaconda environment. Like pycocotools, sklearn
 
 # Notes
 This repo was used to generate the result for generating Action Recognition related results in Def Expo 2020.
