@@ -8,7 +8,12 @@ Use this to create an anaconda environment : https://dimension-nxg.slack.com/arc
 ```Pafprocess error : No module named '_pafprocess'
 you need to build c++ library for pafprocess. See : https://github.com/ildoonet/tf-pose-estimation/tree/master/tf_pose/pafprocess
 ```
- > To get rid of the above error install tf_pose 
+ > To get rid of the above error install tf_pose by going inside the ExtraUtil folder then 
+ cd tf-pose-estimation/tf_pose/pafprocess
+ followed by 
+ ```
+ $ python setup.py install
+ ```
 
 
 # Notes
