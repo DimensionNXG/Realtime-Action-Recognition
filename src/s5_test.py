@@ -265,7 +265,8 @@ def draw_result_img(img_disp, ith_img, humans, dict_id2skeleton,
     desired_cols = int(1.0 * c * (img_disp_desired_rows / r))
     img_disp = cv2.resize(img_disp,
                           dsize=(desired_cols, img_disp_desired_rows))
-
+    # Original Number
+    img_raw = img_disp
     # Draw all people's skeleton
     skeleton_detector.draw(img_disp, humans)
 
@@ -279,7 +280,7 @@ def draw_result_img(img_disp, ith_img, humans, dict_id2skeleton,
             lib_plot.draw_action_result(img_disp, id, skeleton, label)
 
     # Add blank to the left for displaying prediction scores of each class
-    img_disp = lib_plot.add_white_region_to_left_of_image(img_disp)
+    img_disp = lib_plot.add_white_region_to_left_of_image(img_raw, img_disp)
 
     cv2.putText(img_disp, "Frame:" + str(ith_img),
                 (20, 20), fontScale=1.5, fontFace=cv2.FONT_HERSHEY_PLAIN,
