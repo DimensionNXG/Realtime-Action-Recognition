@@ -6,7 +6,7 @@ To enable hasslefree configuration, I have listed a environment.yml.
 Use this to create an anaconda environment : https://dimension-nxg.slack.com/archives/C7MAH32MQ/p1608526931005200
 i.e  
 ``` 
-$ conda env create -f Filename.yml
+$ conda env create -f environment.yml
 
 ```
 
