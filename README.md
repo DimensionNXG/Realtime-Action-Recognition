@@ -1,3 +1,7 @@
+Results obtained:
+https://drive.google.com/file/d/1fPm4jXT-WSgBBSB6B6vRkytsZhFpNh0F/view
+
+
 # Notes
 This repo was used to generate the result for generating Action Recognition related results in Def Expo 2020.
 Link to Result can be viewed in Paaji and Yukti ji's following slack thread.
