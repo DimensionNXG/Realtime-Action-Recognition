@@ -12,7 +12,7 @@ you need to build c++ library for pafprocess. See : https://github.com/ildoonet/
  cd tf-pose-estimation/tf_pose/pafprocess
  followed by 
  ```
- $ python setup.py install
+ $ swig -python -c++ pafprocess.i && python3 setup.py build_ext --inplace
  ```
 
 
